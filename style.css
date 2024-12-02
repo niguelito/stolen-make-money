@@ -1,0 +1,933 @@
+/* Parameters for extension popup */
+
+body {
+    width: 100vw;
+    height: 100vh;
+    font-family: "Trebuchet MS";
+
+    overflow-x: hidden;
+    overflow-y: hidden;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main {
+    position: relative;
+    width: 250px;
+    min-height: 470px;
+}
+
+/* Parameters for intro screen */
+
+.introScreen {
+    position: absolute;
+    top: 140px;
+    left: 0px;
+
+    width: 266px;
+
+    text-align: center;
+}
+
+.introWords {
+    font-size: 20px;
+    font-style: italic;
+}
+
+/* Parameters for "everything else" */
+
+.contents {
+    opacity: 0;
+
+    pointer-events: none;
+}
+
+/* Parameters for title */
+
+.title {
+    position: relative;
+    top: 25px;
+
+    text-align: center;
+}
+
+.titleWords {
+    font-size: 30px;
+}
+
+/* Parameters for version information */
+
+.verInfo {
+    position: absolute;
+    top: 3px;
+    left: 4px;
+
+    font-size: 10px;
+}
+
+/* Parameters for settings button */
+
+button.settings {
+    position: absolute;
+    top: 7px;
+    right: 10px;
+
+    width: 20px;
+    height: 20px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.settings:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for settings area */
+
+.settingsArea {
+    position: absolute;
+    top: 80.5px;
+    left: 10px;
+
+    display: none;
+
+    width: 246px;
+
+    text-align: center;
+}
+
+.settingsBorder {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.settingsWord {
+    font-size: 20px;
+}
+
+.decimalSetting {
+    font-size: 15px;
+}
+
+.decimalSlider {
+    position: relative;
+    top: -7px;
+}
+
+.digitsFont {
+    position: relative;
+    top: -4px;
+    left: -2px;
+
+    font-size: 15px;
+
+    transition: 0.2s;
+}
+
+button.settingsBack {
+    position: absolute;
+    bottom: 57px;
+    left: 18px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.settingsBack:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+.saveNote {
+    position: absolute;
+    bottom: 42px;
+    left: 87px;
+
+    padding-right: 15px;
+
+    display: none;
+
+    font-size: 12px;
+}
+
+/* Parameters for prestige button */
+
+button.prestige {
+    position: absolute;
+    top: 7px;
+    right: 35px;
+
+    width: 60px;
+    height: 20px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.prestige:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for prestige area */
+
+.prestigeArea {
+    position: absolute;
+    top: 80.5px;
+    left: 10px;
+
+    display: none;
+
+    width: 246px;
+
+    text-align: center;
+}
+
+.prestigeBorder {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.prestigeWord {
+    font-size: 20px;
+}
+
+.prestigeText {
+    font-size: 12px;
+}
+
+button.doPrestigeButton {
+    height: 60px;
+    width: 200px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.doPrestigeButton:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+.prestigeGet {
+    font-size: 16px;
+}
+
+button.prestigeBack {
+    position: absolute;
+    bottom: 27px;
+    left: 18px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.prestigeBack:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for casino button */
+
+button.casino {
+    position: absolute;
+    top: 7px;
+    right: 101px;
+
+    width: 55px;
+    height: 20px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.casino:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for casino area */
+
+.casinoArea {
+    position: absolute;
+    top: 80.5px;
+    left: 10px;
+
+    display: none;
+
+    width: 246px;
+
+    text-align: center;
+}
+
+.casinoBorder {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.casinoWord {
+    font-size: 20px;
+}
+
+.casinoMoney {
+    font-size: 15px;
+}
+
+.slotDiv {
+    position: absolute;
+    top: 100px;
+
+    width: 50px;
+    height: 60px;
+
+    border: 1px solid #000000;
+}
+
+#slot_1 {
+    left: 42px;
+}
+
+#slot_2 {
+    left: 97px;
+}
+
+#slot_3 {
+    left: 152px;
+}
+
+.casinoText {
+    font-size: 12px;
+}
+
+button.gambleButton {
+    position: relative;
+    top: -5px;
+
+    height: 22px;
+    width: 75px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.gambleButton:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+.gambleMessage {
+    font-size: 12px;
+}
+
+button.casinoBack {
+    position: absolute;
+    bottom: 27px;
+    left: 18px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.casinoBack:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for switching screen buttons */
+
+.switchingButtons {
+    position: relative;
+    top: 50px;
+    left: -8px;
+}
+
+button.switchButton {
+    position: absolute;
+
+    height: 22px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    border-bottom: 0.5px solid #000000;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.switchButton:hover {
+    border-top: 0.5px solid #777777;
+    border-left: 0.5px solid #777777;
+    border-right: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+.switchIncome {
+    left: 49px;
+}
+
+.switchUpgrades {
+    left: 101.5px;
+}
+
+.switchUpdates {
+    left: 166.5px;
+}
+
+.switchHelp {
+    left: 224px;
+
+    width: 42px;
+}
+
+/* Parameters for money screen */
+
+.moneyScreen {
+    position: relative;
+    top: 95px;
+
+    text-align: center;
+}
+
+.incomeData {
+    font-size: 13px;
+}
+
+.moneyWord {
+    font-size: 17px;
+}
+
+.moneyscreenMoney {
+    position: relative;
+    top: 5px;
+
+    font-size: 22px;
+}
+
+.moneyscreenStatus {
+    font-size: 12px;
+    font-style: italic;
+}
+
+/* Parameters for buying area (still included in money screen) */
+
+.buyArea {
+    display: none;
+}
+
+.buyStatus {
+    font-size: 12px;
+}
+
+button.buyButton {
+    position: relative;
+    top: 10px;
+
+    height: 25px;
+    width: 50px;
+
+    font-size: 14px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.buyButton:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Earning button */
+
+button.earnButton {
+    position: relative;
+    top: 7px;
+
+    height: 80px;
+    width: 100px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background: linear-gradient(to bottom, #F4F4F4, #E5E5E5);
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.earnButton:hover {
+    border: 0.5px solid #777777;
+    background: linear-gradient(to bottom, #F9F9F9, #F4F4F4);
+}
+
+button.earnButton:active {
+    border: 0.5px solid #777777;
+    background: linear-gradient(to top, #F9F9F9, #F4F4F4);
+}
+
+.bonusClicks {
+    position: relative;
+    top: -7px;
+
+    padding-bottom: 10px;
+}
+
+.bonusClicksStuffs {
+    position: relative;
+    top: -3px;
+
+    font-size: 14px;
+}
+
+button.bonusClicksUse {
+    position: relative;
+    top: 5px;
+
+    height: 26px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.bonusClicksUse:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for income screen */
+
+.incomeScreen {
+    position: relative;
+    top: 95px;
+
+    display: none;
+
+    text-align: center;
+}
+
+.incomescreenIncome {
+    font-size: 16px;
+}
+
+.incomeNumber {
+    position: relative;
+    top: 7px;
+
+    font-size: 18px;
+}
+
+.boosts {
+    font-size: 14px;
+}
+
+.possessionsWord {
+    position: relative;
+    top: 7px;
+
+    font-size: 16px;
+}
+
+.possessions {
+    position: relative;
+    top: -5px;
+
+    font-size: 12px;
+}
+
+.incomeNavigation {
+    position: absolute;
+    bottom: 27px;
+}
+
+button.incomeBack {
+    position: relative;
+    left: 10px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.incomeBack:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+button.incomeNext {
+    position: relative;
+    left: 188px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.incomeNext:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for upgrades screen */
+
+.upgradesScreen {
+    position: relative;
+    top: 95px;
+
+    display: none;
+
+    text-align: center;
+}
+
+.upgradeCategory {
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.upgradeSeparator {
+    border: 0;
+    border-top: 1px solid #000000;
+    margin: 1em 0;
+    padding: 0;
+}
+
+.upgradeName {
+    float: left;
+    margin-left: 20px;
+
+    font-size: 15px;
+}
+
+.upgradeDesc {
+    float: left;
+    margin-left: 20px;
+    margin-right: 120px;
+
+    text-align: left;
+    font-size: 12px;
+}
+
+.upgradeCost {
+    float: right;
+    margin-right: 25px;
+
+    font-size: 13px;
+}
+
+button.upgradeBuy {
+    position: absolute;
+    right: 20px;
+
+    margin-top: -5px;
+
+    height: 35px;
+    width: 60px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.upgradeBuy:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+.bonusClicksInfo {
+    position: relative;
+    top: -5px;
+
+    font-size: 11px;
+}
+
+/* Parameters for updates screen */
+
+.updatesScreen {
+    position: relative;
+    top: 95px;
+
+    display: none;
+
+    text-align: left;
+}
+
+.updates {
+    position: relative;
+    left: 10px;
+}
+
+.updatesAdditionalPages {
+    display: none;
+}
+
+.updatesTitle {
+    font-weight: bold;
+    font-size: 14px;
+}
+
+.updatesText {
+    display: block;
+
+    padding-right: 10px;
+    margin-right: 10px;
+    font-size: 12px;
+}
+
+button.updatesBack {
+    position: absolute;
+    left: 20px;
+    bottom: 27px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.updatesBack:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+button.updatesNext {
+    position: absolute;
+    right: 20px;
+    bottom: 27px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.updatesNext:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+/* Parameters for help screen */
+
+.helpScreen {
+    position: relative;
+    top: 95px;
+
+    display: none;
+
+    text-align: left;
+}
+
+button.helpBack {
+    position: absolute;
+    left: 20px;
+    bottom: 27px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.helpBack:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+button.helpNext {
+    position: absolute;
+    right: 20px;
+    bottom: 27px;
+
+    display: none;
+
+    height: 22px;
+    width: 52px;
+
+    font-size: 12px;
+
+    border: 0.5px solid #C6C6C6;
+    outline: none;
+    background-color: #F4F4F4;
+
+    cursor: pointer;
+
+    transition-duration: 0.2s;
+}
+
+button.helpNext:hover {
+    border: 0.5px solid #777777;
+    background-color: #F9F9F9;
+}
+
+.helpContent {
+    position: relative;
+    left: 10px;
+}
+
+.helpHeading {
+    font-weight: bold;
+    font-size: 15px;
+}
+
+.helpText {
+    display: block;
+
+    padding-right: 7px;
+    margin-right: 7px;
+    font-size: 12px;
+}
+
+.helpAdditionalPages {
+    display: none;
+}
