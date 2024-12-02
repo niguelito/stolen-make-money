@@ -217,8 +217,10 @@ function get_data() {
         if (parts.length == 2) return parts.pop().split(";").shift();
     }
     
-    var data = JSON.parse(getCookie("game_data"));
+    let data = getCookie("game_data");
     if (data) {
+        data = JSON.parse(data);
+        
         balance = data.balance
         bonus_clicks = data.bonus_clicks
         items = data.items
