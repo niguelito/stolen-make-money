@@ -33,6 +33,8 @@ var prestige_get
 
 var skip_save = false
 
+var cookieName = "game_data_c05c4c54";
+
 // UTILITY FUNCTIONS
 
 function convert_number(number) {
@@ -175,7 +177,7 @@ function save_changes() {
     var data = {balance: balance, bonus_clicks: bonus_clicks, items: items, decimal_digits: decimal_digits, upgrade_details: upgrade_details, prestige_points: prestige_points};
     const farFutureDate = new Date();
     farFutureDate.setFullYear(farFutureDate.getFullYear() + 100)
-    document.cookie = "game_data=" + JSON.stringify(data) + "; path=/; expires=" + farFutureDate.toUTCString();
+    document.cookie = cookieName + "=" + JSON.stringify(data) + "; path=/; expires=" + farFutureDate.toUTCString();
 }
 
 // SETUP FUNCTIONS
@@ -217,10 +219,10 @@ function get_data() {
         if (parts.length == 2) return parts.pop().split(";").shift();
     }
     
-    let data = getCookie("game_data");
+    let data = getCookie(cookieName);
     if (data) {
         data = JSON.parse(data);
-        
+
         balance = data.balance
         bonus_clicks = data.bonus_clicks
         items = data.items
